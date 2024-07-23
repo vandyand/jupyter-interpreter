@@ -1,1 +1,1 @@
-This is a demo file for demonstrating git commit.
+This is a demo file.
