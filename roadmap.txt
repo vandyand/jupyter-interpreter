@@ -1,0 +1,77 @@
+### Basic Level:
+1. **File Creation and Simple Content:**
+   - **Task:** Create a text file with a timestamp in the name and add some random content.
+   - **Goal:** Ensure basic file operations and git commit/push.
+   - **Status:** COMPLETED
+
+2. **Append Content to an Existing File:**
+   - **Task:** Append random content to an existing .txt file.
+   - **Goal:** Validate ability to modify existing files and manage commits.
+
+3. **Modify Configuration Files:**
+   - **Task:** Add a key-value pair to a JSON configuration file.
+   - **Goal:** Test ability to handle structured data and configuration updates.
+
+### Intermediate Level:
+4. **Script File Creation:**
+   - **Task:** Create a new script (Python/Bash) with a few lines of functional code.
+   - **Goal:** Assess ability to generate executable code and manage code files.
+
+5. **Basic Automation Script:**
+   - **Task:** Write a script that performs a basic automation task, like renaming files in a directory.
+   - **Goal:** Ensure the system can handle basic automation tasks.
+
+6. **Simple Web Page Update:**
+   - **Task:** Add a new paragraph to an HTML file.
+   - **Goal:** Verify handling of web files and basic HTML understanding.
+
+### Advanced Level:
+7. **Build and Commit Complex Data Structures:**
+   - **Task:** Create a more complex JSON/YAML file with nested structures.
+   - **Goal:** Test handling of complex data and configuration management.
+
+8. **Automated Data Processing Script:**
+   - **Task:** Create a script that reads data from a file, processes it, and writes the output to another file.
+   - **Goal:** Validate data processing capabilities and file I/O operations.
+
+9. **Web Scraping Task:**
+   - **Task:** Write a Python script that scrapes data from a website and saves it to a file.
+   - **Goal:** Ensure capability to interact with web content and handle network operations.
+
+### Expert Level:
+10. **API Interaction:**
+    - **Task:** Create a script that interacts with a REST API, fetches data, and saves it to a file.
+    - **Goal:** Validate API interaction capabilities.
+
+11. **Database Operations:**
+    - **Task:** Write a script that connects to a database, performs a query, and saves the results to a file.
+    - **Goal:** Ensure database interaction and data management skills.
+
+12. **Complex Automation Workflow:**
+    - **Task:** Develop a multi-step automation script that involves file manipulation, data processing, API interaction, and database updates.
+    - **Goal:** Test the system's ability to handle complex, multi-step workflows.
+
+### Master Level:
+13. **CI/CD Pipeline Simulation:
+- **Status:** COMPLETED**
+    - **Task:** Create a script that simulates a Continuous Integration/Continuous Deployment (CI/CD) pipeline, including building, testing, and deploying an application.
+    - **Goal:** Validate integration and deployment capabilities.
+
+14. **Machine Learning Model Deployment:
+- **Status:** COMPLETED- **Status:** COMPLETED
+    - **Task:** Write a script that trains a simple machine learning model on a dataset and saves the model.
+    - **Goal:** Ensure capability to handle machine learning tasks and model management.
+
+15. **Distributed System Coordination:
+- **Status:** COMPLETED- **Status:** COMPLETED
+    - **Task:** Develop a task that requires coordination between multiple agents to achieve a common goal, such as parallel data processing or distributed computing.
+    - **Goal:** Test the system's ability to manage and coordinate complex, distributed tasks.
+
+### Roadmap:
+1. **Start with Basic Level tasks** to establish foundational capabilities.
+2. **Progress to Intermediate Level tasks** to introduce more complexity and validate more advanced operations.
+3. **Advance to Advanced Level tasks** to ensure the system can handle real-world data processing and automation scenarios.
+4. **Move to Expert Level tasks** to test high-level functionalities like API interactions and database operations.
+5. **Finally, tackle Master Level tasks** to simulate complete workflows, CI/CD pipelines, and distributed system coordination.
+
+This roadmap can help incrementally test and improve the capabilities of a multi-ai-agent compute system, ensuring it can handle increasingly complex tasks effectively.
