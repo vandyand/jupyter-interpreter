@@ -79,6 +79,14 @@ class FIFOQueue:
 import openai
 from openai import OpenAI
 import os
+import time
+
+def save_and_print(message, log_file='agent_log.txt'):
+    timestamp = int(time.time())
+    message_with_timestamp = f"[{timestamp}] {message}"
+    print(message_with_timestamp)
+    with open(log_file, 'a') as f:
+        f.write(message_with_timestamp + '\n')
 
 class Agent:
     def __init__(self, name, special_commands="", mode="OpenInterpreter", context_window=128000, max_tokens=10000):
@@ -111,26 +119,26 @@ class Agent:
         self.other_agents.append(agent)
 
     def handle_state(self):
-        print(f"[{self.name}] Current State: {self.state}")
+        save_and_print(f"[{self.name}] Current State: {self.state}")
 
         if self.state == "SPECTATE":
             if not self.inbox.is_empty():
                 self.most_recently_received_messages = self.inbox.dequeue()["messages"]
-                print(f"[{self.name}] Received message(s)")
+                save_and_print(f"[{self.name}] Received message(s)")
                 self.state = "MUTATE"
 
         elif self.state == "MUTATE":
             self.internal_state.extend(self.swap_roles(self.most_recently_received_messages))
-            print(f"[{self.name}] Internal state mutated")
+            save_and_print(f"[{self.name}] Internal state mutated")
             if self.mode == "OpenInterpreter":
                 self.generated_new_messages = self.oi.chat(self.internal_state, display=True, stream=False, blocking=True)
             elif self.mode == "OpenAI":
                 self.generated_new_messages = self.openai_chat(self.internal_state)
             elif self.mode == "Human":
                 self.generated_new_messages = [{"role":"user", "content": self.blocking_input("Enter message:"), "type": "message"}]
-            print(f"[{self.name}] Generated new message(s)")
+            save_and_print(f"[{self.name}] Generated new message(s)")
             if self.mode == "OpenAI":
-                print(f"[{self.name}] New message(s): {self.generated_new_messages}")
+                save_and_print(f"[{self.name}] New message(s): {self.generated_new_messages}")
             self.state = "DICTATE"
 
         elif self.state == "DICTATE":
@@ -139,12 +147,12 @@ class Agent:
             self.most_recently_received_messages = []
             self.state = "SPECTATE"
 
-        print(f"[{self.name}] New State: {self.state}")
+        save_and_print(f"[{self.name}] New State: {self.state}")
 
     def send_message_to_agents(self, messages):
         for agent in self.other_agents:
             agent.inbox.enqueue(messages)
-            print(f"[{self.name}] Sent message to {agent.name}")
+            save_and_print(f"[{self.name}] Sent message to {agent.name}")
 
     def swap_roles(self, messages):
         for message in messages:
@@ -300,28 +308,34 @@ prompts = {
 # In[ ]:
 
 
-roadmapper = Agent("Roadmap Architect", prompts["roadmapper"])
+# roadmapper = Agent("Roadmap Architect", prompts["roadmapper"])
 pm = Agent("Project Manager", prompts["manager"], mode="OpenAI")
 dev = Agent("Software Developer", prompts["dev"])
 verifier = Agent("Task verifier", prompts["verifier"], mode="OpenAI")
-# human = Agent("Human guy", "You are a human", mode="Human")
+human = Agent("Human guy", "You are a human", mode="Human")
 
-roadmapper.add_other_agent(pm)
+# roadmapper.add_other_agent(pm)
 pm.add_other_agent(dev)
 dev.add_other_agent(verifier)
-verifier.add_other_agent(pm)
-# human.add_other_agent(pm)
+verifier.add_other_agent(human)
+human.add_other_agent(pm)
 
-roadmapper.inbox.enqueue(
+# roadmapper.inbox.enqueue(
+#     [{"role": "user", "content": f"Here is the content of the project_description.txt file: \n\n {util_read_file("project_description.txt")}", "type": "message"},
+#     {"role": "user", "content": "Please proceed to create a very detailed roadmap.json file complete with nested heirarchical tasks and sub tasks. Please keep creating sub tasks of sub tasks until the deepest sub-tasks are optimally atomic such as to be achievable by an llm-backed open-interpreter ai agent.", "type": "message"}])
+
+pm.inbox.enqueue(
     [{"role": "user", "content": f"Here is the content of the project_description.txt file: \n\n {util_read_file("project_description.txt")}", "type": "message"},
-    {"role": "user", "content": "Please proceed to create a very detailed roadmap.json file complete with nested heirarchical tasks and sub tasks. Please keep creating sub tasks of sub tasks until the deepest sub-tasks are optimally atomic such as to be achievable by an llm-backed open-interpreter ai agent.", "type": "message"}])
+     {"role": "user", "content": f"Here is the content of the roadmap.json file: \n\n {util_read_file("roadmap.json")}", "type": "message"},
+    {"role": "user", "content": "Please proceed to instruct the developer on next steps.", "type": "message"}])
+
 
 while True:
-    roadmapper.handle_state()
+    # roadmapper.handle_state()
     pm.handle_state()
     dev.handle_state()
     verifier.handle_state()
-    # human.handle_state()
+    human.handle_state()
 
 
 
