@@ -25,7 +25,7 @@
         "type": "TASK",
         "name": "Implement eBay API integration to fetch selling history data",
         "description": "Integrate with eBay's API to fetch selling history for items.",
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
     },
     {
         "id": 5,
