@@ -65,7 +65,7 @@
                     "name": "Develop API endpoints",
                     "description": "Create API endpoints for serving scraped listings and individual item details.",
                     "completion_criteria": "Endpoints for listing and item details are functional.",
-                    "status": "NOT_STARTED",
+                    "status": "COMPLETED",
                     "sub_tasks": []
                 }
             ]
