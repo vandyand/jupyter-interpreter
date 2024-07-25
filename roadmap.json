@@ -18,7 +18,7 @@
         "type": "TASK",
         "name": "Develop API endpoints for fetching listings and item details",
         "description": "Construct the API endpoints to fetch liquidation listings and extract item details.",
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
     },
     {
         "id": 4,
