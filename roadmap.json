@@ -11,7 +11,7 @@
         "type": "TASK",
         "name": "Implement scraping logic for liquidation listings",
         "description": "Create the logic to scrape liquidation listings from various sites.",
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
     },
     {
         "id": 3,
