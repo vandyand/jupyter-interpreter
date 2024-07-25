@@ -1,20 +1,25 @@
 
-import requests
-from bs4 import BeautifulSoup
+from flask import Flask, jsonify
 
-def scrape_liquidation_listings(url):
-    response = requests.get(url)
-    if response.status_code == 200:
-        soup = BeautifulSoup(response.text, 'html.parser')
+app = Flask(__name__)
 
-        # Example: Find listings (this needs to be tailored to the specific site's structure)
-        listings = soup.find_all('div', class_='listing-class')  # Change 'listing-class' to actual class
-        for listing in listings:
-            title = listing.find('h2').text  # Assuming listing title is in an <h2> tag
-            price = listing.find('span', class_='price-class').text  # Change price-class accordingly
-            print(f'Title: {title}, Price: {price}')
+# Sample data for listings
+listings = [
+    {'id': 1, 'title': 'Listing 1', 'description': 'Description 1'},
+    {'id': 2, 'title': 'Listing 2', 'description': 'Description 2'},
+]
+
+@app.route('/api/listings', methods=['GET'])
+def get_listings():
+    return jsonify(listings), 200
+
+@app.route('/api/listings/<int:id>', methods=['GET'])
+def get_listing(id):
+    listing = next((listing for listing in listings if listing['id'] == id), None)
+    if listing:
+        return jsonify(listing), 200
     else:
-        print(f'Failed to fetch page: {response.status_code}')
+        return jsonify({'error': 'Listing not found'}), 404
 
-# Example usage
-scrape_liquidation_listings('https://example-liquidation-website.com')  # Replace with actual URL
+if __name__ == '__main__':
+    app.run(debug=True, port=5001)  # Changed to port 5001

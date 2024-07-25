@@ -28,7 +28,7 @@
                     "name": "Implement scraping logic",
                     "description": "Write scripts to scrape data from liquidation websites using BeautifulSoup or Scrapy.",
                     "completion_criteria": "Scraping scripts are able to fetch listings successfully.",
-                    "status": "NOT_STARTED",
+                    "status": "COMPLETED",
                     "sub_tasks": [
                         {
                             "id": "1.2.1",
@@ -181,6 +181,27 @@
                     "description": "Use Swagger/OpenAPI to document the API endpoints and their usage.",
                     "completion_criteria": "API documentation is comprehensive and published.",
                     "status": "NOT_STARTED",
+                    "sub_tasks": []
+                }
+            ]
+        },
+        {
+            "id": "1",
+            "depends_on": [],
+            "type": "MILESTONE",
+            "name": "Phase 1: Environment Setup",
+            "description": "Set up the development environment for the project.",
+            "completion_criteria": "Python environment is set up successfully.",
+            "status": "COMPLETED",
+            "sub_tasks": [
+                {
+                    "id": "1.1",
+                    "depends_on": [],
+                    "type": "TASK",
+                    "name": "Set up Python environment",
+                    "description": "Create and configure the Python virtual environment for the project.",
+                    "completion_criteria": "Python environment is configured and dependencies are installed.",
+                    "status": "COMPLETED",
                     "sub_tasks": []
                 }
             ]
