@@ -39,7 +39,7 @@
         "type": "TASK",
         "name": "Develop algorithms to analyze and assess the value of items and lots",
         "description": "Create algorithms to determine the assessed value of liquidation listings based on historical data.",
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
     },
     {
         "id": 7,
