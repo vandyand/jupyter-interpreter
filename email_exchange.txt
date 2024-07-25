@@ -1,0 +1,48 @@
+Business software inquiry
+Inbox
+
+Andrew <vandyand@gmail.com>
+19 Jul 2024, 09:39 (6 days ago)
+to Max
+
+Hey Max!
+
+Hope all is going well with you guys. We all really enjoyed Otis' song!
+
+I was wondering how things are going on the pallet goods reselling front and specifically I was wondering if there's any type of software tool I could make to help you out in any way. I know we talked a little bit about this at Lake George.
+
+Currently I'm interviewing for an engineering role at Orb Aerospace but in the meantime I have some free time so I was thinking it may be a good opportunity for me to work on some cool software tools. The thing is, I'd like the software to be useful to someone and you came to mind.
+
+No pressure either way, and I hope you guys are enjoying your summer!
+
+Thanks,
+Andrew
+
+Max Belz
+19 Jul 2024, 16:20 (6 days ago)
+to me
+
+Andrew,
+
+good to hear from you. I was proud of Otis's song and I'm glad you guys liked it. Here are some of my recent thoughts that might spark something for you.
+
+1) I've become doubtful of Facebook Marketplace's security (lots of scams on the listing side, but I've also wondered if all the inquiries I get from people are actually real). Also, I wonder if there is anything to game the algorithm to my favor. I don't know how they rank things or show people certain listings, but I wonder if I can do anything to improve visibility there. Maybe you understand this.
+
+2) The other question for me right now is inventory. Is there a little bot to scrub certain sites for good lots of inventory? I usually use a site called liquidation.com, but I also need to expand my search and I don't have a methodical way to do that. Perhaps something that could look for certain terms "vacuum" "parts" across different auction sites?
+
+Those are just two primitive ideas. I appreciate your mentioning it. I'll keep thinking about your question though.
+
+And good to hear about that job interview. Let me know how that comes out.
+
+-Max
+
+
+Andrew <vandyand@gmail.com>
+24 Jul 2024, 17:01 (15 hours ago)
+to Max
+
+Hey Max!
+
+I think the second option would be a lot easier to target from a computer software standpoint. I'm working on a "smart" computer system right now that uses ai to help build software. It's kind of a big experiment at this point but I'm hoping to be able to use it to help me make a type of software tool that would be useful for you in finding optimal liquidation deals. I'll keep you posted. Best of luck in the meantime!
+
+- Andrew
