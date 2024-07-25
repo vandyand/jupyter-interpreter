@@ -32,7 +32,7 @@
         "type": "TASK",
         "name": "Create endpoints to retrieve and store eBay data",
         "description": "Develop endpoints that will allow the retrieval and storage of eBay data into the system.",
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
     },
     {
         "id": 6,
