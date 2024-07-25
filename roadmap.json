@@ -1,46 +1,189 @@
 {
     "tasks": [
         {
-            "id": 1,
+            "id": "1",
             "depends_on": [],
             "type": "MILESTONE",
             "name": "Phase 1: Backend Development",
-            "description": "Set up the backend environment and develop the scraping logic for liquidation listings.",
-            "completion_criteria": "Backend is set up, scraping logic implemented, and API endpoints for fetching listings and item details are available.",
-            "status": "NOT_STARTED"
+            "description": "Initial phase focusing on setting up the backend environment and API endpoints.",
+            "completion_criteria": "Setting up of Flask/FastAPI, creating basic endpoints for listings.",
+            "status": "NOT_STARTED",
+            "sub_tasks": [
+                {
+                    "id": "1.1",
+                    "depends_on": [],
+                    "type": "TASK",
+                    "name": "Set up Python environment",
+                    "description": "Install Python, Flask or FastAPI, and other necessary dependencies.",
+                    "completion_criteria": "Python and Flask/FastAPI are installed and verified.",
+                    "status": "NOT_STARTED",
+                    "sub_tasks": []
+                },
+                {
+                    "id": "1.2",
+                    "depends_on": [
+                        "1.1"
+                    ],
+                    "type": "TASK",
+                    "name": "Implement scraping logic",
+                    "description": "Write scripts to scrape data from liquidation websites using BeautifulSoup or Scrapy.",
+                    "completion_criteria": "Scraping scripts are able to fetch listings successfully.",
+                    "status": "NOT_STARTED",
+                    "sub_tasks": [
+                        {
+                            "id": "1.2.1",
+                            "depends_on": [
+                                "1.2"
+                            ],
+                            "type": "TASK",
+                            "name": "Select web scraping library",
+                            "description": "Choose a library (e.g., BeautifulSoup, Scrapy) and set it up for scraping.",
+                            "completion_criteria": "Library is selected and configured.",
+                            "status": "NOT_STARTED",
+                            "sub_tasks": []
+                        },
+                        {
+                            "id": "1.2.2",
+                            "depends_on": [
+                                "1.2.1"
+                            ],
+                            "type": "TASK",
+                            "name": "Develop scraping scripts",
+                            "description": "Create scripts that scrape listings from liquidation.com and other sources.",
+                            "completion_criteria": "Scraping scripts are tested and functional.",
+                            "status": "NOT_STARTED",
+                            "sub_tasks": []
+                        }
+                    ]
+                },
+                {
+                    "id": "1.3",
+                    "depends_on": [
+                        "1.2"
+                    ],
+                    "type": "TASK",
+                    "name": "Develop API endpoints",
+                    "description": "Create API endpoints for serving scraped listings and individual item details.",
+                    "completion_criteria": "Endpoints for listing and item details are functional.",
+                    "status": "NOT_STARTED",
+                    "sub_tasks": []
+                }
+            ]
         },
         {
-            "id": 2,
+            "id": "2",
             "depends_on": [
-                1
+                "1"
             ],
             "type": "MILESTONE",
             "name": "Phase 2: Integration with eBay API",
-            "description": "Integrate eBay API and implement functionality to fetch and store selling history data.",
-            "completion_criteria": "eBay API is integrated, and data is being fetched and stored successfully.",
-            "status": "NOT_STARTED"
+            "description": "Integrating with eBay API to fetch selling history for items in the liquidation listings.",
+            "completion_criteria": "Successful retrieval of eBay listing data.",
+            "status": "NOT_STARTED",
+            "sub_tasks": [
+                {
+                    "id": "2.1",
+                    "depends_on": [
+                        "1.3"
+                    ],
+                    "type": "TASK",
+                    "name": "Implement eBay API integration",
+                    "description": "Create scripts to fetch item selling history from eBay.",
+                    "completion_criteria": "eBay selling data is fetched successfully.",
+                    "status": "NOT_STARTED",
+                    "sub_tasks": []
+                },
+                {
+                    "id": "2.2",
+                    "depends_on": [
+                        "2.1"
+                    ],
+                    "type": "TASK",
+                    "name": "Create endpoints for eBay data",
+                    "description": "Implement API endpoints to query and retrieve eBay selling history data.",
+                    "completion_criteria": "Endpoints for eBay data retrieval are created and functional.",
+                    "status": "NOT_STARTED",
+                    "sub_tasks": []
+                }
+            ]
         },
         {
-            "id": 3,
+            "id": "3",
             "depends_on": [
-                2
+                "2"
             ],
             "type": "MILESTONE",
             "name": "Phase 3: Value Analysis",
-            "description": "Develop algorithms to analyze and assess the value of items and lots based on eBay data.",
-            "completion_criteria": "Algorithms for value analysis are developed and tested successfully.",
-            "status": "NOT_STARTED"
+            "description": "Develop algorithms to assess the value of items and listings based on historical data.",
+            "completion_criteria": "Algorithms and endpoints for value analysis are implemented.",
+            "status": "NOT_STARTED",
+            "sub_tasks": [
+                {
+                    "id": "3.1",
+                    "depends_on": [],
+                    "type": "TASK",
+                    "name": "Develop value analysis algorithms",
+                    "description": "Create algorithms that analyze eBay data to determine item values.",
+                    "completion_criteria": "Value assessment algorithm is functional and accurate.",
+                    "status": "NOT_STARTED",
+                    "sub_tasks": []
+                },
+                {
+                    "id": "3.2",
+                    "depends_on": [
+                        "3.1"
+                    ],
+                    "type": "TASK",
+                    "name": "Implement value analysis endpoints",
+                    "description": "Create API endpoints to analyze and assess values of listings and items.",
+                    "completion_criteria": "Endpoints for value analysis are created and functional.",
+                    "status": "NOT_STARTED",
+                    "sub_tasks": []
+                }
+            ]
         },
         {
-            "id": 4,
+            "id": "4",
             "depends_on": [
-                3
+                "3"
             ],
             "type": "MILESTONE",
             "name": "Phase 4: Testing and Documentation",
-            "description": "Write tests for all functionalities and document the API using Swagger/OpenAPI.",
-            "completion_criteria": "All tests are written, and comprehensive API documentation is complete.",
-            "status": "NOT_STARTED"
+            "description": "Testing all functionalities and documenting the API with Swagger/OpenAPI.",
+            "completion_criteria": "All tests pass, and API documentation is complete.",
+            "status": "NOT_STARTED",
+            "sub_tasks": [
+                {
+                    "id": "4.1",
+                    "depends_on": [],
+                    "type": "TASK",
+                    "name": "Write unit tests",
+                    "description": "Create unit tests for individual functions and methods in the code.",
+                    "completion_criteria": "All unit tests are written and passing.",
+                    "status": "NOT_STARTED",
+                    "sub_tasks": []
+                },
+                {
+                    "id": "4.2",
+                    "depends_on": [],
+                    "type": "TASK",
+                    "name": "Write integration tests",
+                    "description": "Write tests to ensure that different components of the application work together as expected.",
+                    "completion_criteria": "All integration tests are written and passing.",
+                    "status": "NOT_STARTED",
+                    "sub_tasks": []
+                },
+                {
+                    "id": "4.3",
+                    "depends_on": [],
+                    "type": "TASK",
+                    "name": "Document API",
+                    "description": "Use Swagger/OpenAPI to document the API endpoints and their usage.",
+                    "completion_criteria": "API documentation is comprehensive and published.",
+                    "status": "NOT_STARTED",
+                    "sub_tasks": []
+                }
+            ]
         }
     ]
 }

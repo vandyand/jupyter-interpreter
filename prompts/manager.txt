@@ -24,13 +24,16 @@ To improve tracking task progress and prevent duplication of effort, follow thes
 
 The structure of each task in 'roadmap.json' is as follows:
 
-json.task.schema
+json.Task.schema
 {
     "id": int (auto-incrementing),
+    "depends_on": list[int] (ids of task this one depends on)
     "type": "TASK" | "MILESTONE"
     "name": string (task name),
     "description": string (task details),
+    "completion_criteria": string (what needs to be accomplished to complete the task)
     "status": "NOT_STARTED" | "IN_PROGRESS" | "COMPLETED"
+    "sub_tasks": list[Task] (recursive list of subtasks)
 }
 
 

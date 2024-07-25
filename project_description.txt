@@ -169,17 +169,14 @@ Phase 4: Testing and Documentation
 
 Write unit and integration tests for all functionalities.
 Document API using Swagger/OpenAPI.
+
 Deliverables
 Fully functional backend API
 Swagger/OpenAPI documentation
 Comprehensive test suite
 Deployment scripts and environment setup
 
-Steps
-First: Backend setup and scraping implementation
-Second: eBay API integration and data storage
-Third: Value analysis and additional endpoints
-Fourth: Testing, documentation, and final revisions
+
 
 Team Roles
 Project Manager: Oversee development and ensure timelines are met.
