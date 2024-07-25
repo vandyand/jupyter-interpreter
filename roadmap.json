@@ -46,7 +46,7 @@
         "type": "TASK",
         "name": "Implement endpoints for value analysis",
         "description": "Develop the API endpoints necessary for analyzing the value of listings.",
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
     },
     {
         "id": 8,
