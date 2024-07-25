@@ -1,3 +1,0 @@
-This is some random content.
-echo ##active_line2##
-Enjoy the randomness!

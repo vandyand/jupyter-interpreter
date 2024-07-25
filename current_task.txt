@@ -1,4 +1,0 @@
-Current task:
-Make a new file called "file_{timestamp}.txt" where timestamp is unix timestamp.
-Save the file and create a new git commit on master branch with the changes.
-Make sure you are on master branch and commit to master branch
