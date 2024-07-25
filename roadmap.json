@@ -60,7 +60,7 @@
         "type": "TASK",
         "name": "Document API using Swagger/OpenAPI",
         "description": "Prepare the documentation for the API interfaces using Swagger/OpenAPI specifications.",
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
     },
     {
         "id": 10,
