@@ -53,7 +53,7 @@
         "type": "TASK",
         "name": "Write unit and integration tests for all functionalities",
         "description": "Create tests to ensure the functionality and reliability of the implemented features.",
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
     },
     {
         "id": 9,
