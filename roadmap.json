@@ -4,7 +4,7 @@
         "type": "TASK",
         "name": "Set up Python environment with Flask or FastAPI",
         "description": "Initialize the Python environment for backend development using Flask or FastAPI.",
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
     },
     {
         "id": 2,
