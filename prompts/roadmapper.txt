@@ -7,10 +7,13 @@ The "roadmap.json" file should contain tasks for each step of the project, with 
 json.task.schema
 {
     "id": int (auto-incrementing),
+    "depends_on": list[ints] (ids of task this one depends on)
     "type": "TASK" | "MILESTONE"
     "name": string (task name),
     "description": string (task details),
+    "completion_criteria": string (what needs to be accomplished to complete the task)
     "status": "NOT_STARTED" | "IN_PROGRESS" | "COMPLETED"
+
 }
 
 To create the roadmap.json file, follow these steps:
